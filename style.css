@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/*DESIGN CLASSES*/
+hr{
+    margin-top: 5px;
+    border-top: 1px solid #222;
+}
+p{
+    color: #333;
+}
+h1{
+    font-size: 3rem;
+    width: 100%;
+    color: #FFB300;
+    font-weight: bold;
+
+}
+h4{
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+    font-size: 22px;
+}
+.customP{
+    font-size: 22px!important;
+    color: black!important;
+    margin-top: 10px;
+}
+#weather{
+    letter-spacing: 7px;
+    margin-bottom: 10px;
+}
+
+/*
+
+Modal
+*/
+
+
+.close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 30px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+
+
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 73, 94, 0.8);
+  z-index: 50;
+  visibility: hidden;
+  
+  opacity: 0;
+  
+  transition: 0.7s;
+}
+
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 300px;
+  margin-left: -200px;
+  margin-top: -150px;
+  background: url("images/background-beach-beautiful-1076429.jpg");
+  z-index: 100;
+  visibility: hidden;
+  
+  opacity: 0;
+  
+  transition: 0.5s ease-out;
+  
+  transform: translateY(45px);
+}
+
+
+.active{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.active + .modal{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.modalText{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.modalText input{
+    background: none;
+    border: 1px solid green;
+    height: 20px;
+    width: 200px;
+    margin: 15px 0 15px 0;
+    padding: 10px;
+    color: #f4f4f4;
+}
+.modalText button{
+    background: #333;
+    border: none;
+    padding: 20px 50px;
+    color: white;
+    opacity: 0.9;
+    cursor: pointer;
+}
+/*end modal*/
+.modalOpen{
+    position: absolute;
+    top: 15px;
+    right: 0;
+    transform: translate(-50%,-50%);
+}
+#time{
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 10px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.background{
+    background: url("images/background.jpeg");
+    height: 100vh;
+    background-repeat: no-repeat;
+
+}
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.card{
+    height: 700px;
+    width: 500px;
+    margin: 0 auto;
+    background: #f4f4f4;
+}
+.card .cardHeading{
+    background: url("images/beach-black-and-white-clouds-414491.jpg");
+    height: 50%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    margin: 0 auto;
+    position: relative;
+}
+.headingTxt{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.mainText{
+    padding: 20px 0;
+}
+.card-main{
+    background: lightgrey;
+    height: auto;
+}
+
