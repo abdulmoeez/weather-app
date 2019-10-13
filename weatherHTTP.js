@@ -1,7 +1,11 @@
 class weatherHtpp{
     constructor(){
         this.id = '3aba323acfad0c1198ba4acc191a8e04';
+        if(localStorage.getItem('city') == ''){
+            this.city = 'New York'
+        }else{
         this.city = localStorage.getItem('city');
+        }
         
     }
 

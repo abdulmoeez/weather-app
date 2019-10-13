@@ -192,3 +192,25 @@ Modal
     height: auto;
 }
 
+/*FOOTER*/
+footer{
+    background: #ccc;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .background{
+        background: none;
+    }
+    .card-main{
+        padding: 20px;
+    }
+    .container{
+        max-width: 100%;
+    }
+}

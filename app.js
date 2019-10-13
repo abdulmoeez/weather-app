@@ -11,6 +11,7 @@ document.querySelector(".modalSubmit").addEventListener('click', ()=>{
     const city = document.querySelector("#cityValue").value;
     console.log(2);
     localStorage.setItem('city', city);
+    window.location.reload();
     
 })
 
