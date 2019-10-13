@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    <title>Weather App</title>
+</head>
+<body>
+        
+
+    <div class="background">
+        <div class="container">
+                <div class="mask" role="dialog"></div>
+                <div class="modal" role="alert">
+                    <div class="modalText">
+                        <h4>Enter City</h4>
+                        <input placeholder="City.." id="cityValue">
+                        <button type="submit" class="modalSubmit">Update</button>
+                    </div>
+                  <button class="close" role="button">X</button>
+                </div>
+            <div class="card">
+                <div class="cardHeading">
+                    <div class="headingTxt">
+                        <p id="time"></p>
+                        <h4 id="city"></h4>
+                        <h4 id="weather"></h4>
+                        <h1 id="temp"></h1>
+                        <!-- <img id="weatherIcon" src=""> -->
+                    </div>
+                    <div class="modalOpen">
+                        <button aria-haspopup="true" class="show">Edit</button>
+                    </div>
+                </div>
+                <div class="card-main">
+                    <div class="container">
+                        <div class="mainText">
+                            <p>Humidity</p>
+                            <p id="humidity" class="customP"></p>
+                            <hr>
+                        </div>
+                        <div class="mainText">
+                            <p>Pressure</p>
+                            <p id="pressure" class="customP"></p>
+                            <hr>
+                        </div>
+                        <div class="mainText">
+                            <p>Forcast</p>
+                            <p id="forcast" class="customP"></p>
+                            <hr>
+                        </div>
+                        <div class="mainText">
+                            <p>Wind Speed</p>
+                            <p id="wind" class="customP"></p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="">
+            <div class="footerText">
+                <p>Design by abdulmoeez</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script>
+      // Click function for show the Modal
+
+$(".show").on("click", function(){
+  $(".mask").addClass("active");
+});
+
+// Function for close the Modal
+
+function closeModal(){
+  $(".mask").removeClass("active");
+}
+
+// Call the closeModal function on the clicks/keyboard
+
+$(".close, .mask").on("click", function(){
+  closeModal();
+});
+$(".modalSubmit").on("click", function(){
+  closeModal();
+});
+
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {
+    closeModal();
+  }
+});
+    </script>
+    <script src="weatherHTTP.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
